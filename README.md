@@ -2,7 +2,8 @@
 This is the simple library of calender month view, where you can show activity on each day of month in circular shape same as Google Fit Android app.
 
 # Screenshot
-![](https://imgur.com/22wZT3X)
+![](https://imgur.com/a/M9u2zeB)
+
 
 # Usage
 Take a look at drawDays() method of MainActivity.java file.
