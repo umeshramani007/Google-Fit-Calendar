@@ -1,5 +1,14 @@
-
 #  CalenderEvent
+Google Fit app like Calendar view
+
+Android calander view to highlight activity on each day same like Android Google Fit app.
+
+# Usage
+Take a look at MainActivity.java file.
+
+# External Library
+To show month view of calandar, we have used external third party library https://github.com/mahimrocky/EventCalender
+
 
 This is the simple library of calender, where you can set event on specific date. And this calender you can customize all section.
 
@@ -62,7 +71,7 @@ Event event = new Event(calendar.getTimeInMillis(), "Test",Color.RED);
 calenderEvent.addEvent(event);
 ```
 
-for remove event you can call 
+for remove event you can call
 ```sh
     calenderEvent.removeEvent(event);
 ```
@@ -76,3 +85,15 @@ for each item click get all date or event. Below section you will get event,time
         });
 ```
 # Happy Coding
+=======
+# Google-Fit-Calendar
+Google Fit app like Calendar view
+
+Android calander view to highlight activity on each day same like Android Google Fit app.
+
+# Usage
+Take a look at MainActivity.java file.
+
+# External Library
+To show month view of calandar, we have used external third party library https://github.com/mahimrocky/EventCalender
+>>>>>>> origin/master
