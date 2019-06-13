@@ -1,12 +1,10 @@
 package com.skyhope.evencalneder;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.skyhope.eventcalenderlibrary.CalenderEvent;
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements OnMonthChangedLis
     private static final String TAG = "CalenderTest";
     private CalenderEvent calenderEvent;
     private MyView myView;
-    private Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements OnMonthChangedLis
 
         calenderEvent = findViewById(R.id.calender_event);
         myView = findViewById(R.id.myView);
-        button = findViewById(R.id.button);
+
         final Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, 1);
         Event event = new Event(calendar.getTimeInMillis(), "Test");
@@ -44,13 +42,6 @@ public class MainActivity extends AppCompatActivity implements OnMonthChangedLis
         });
 
         drawDays();
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calenderEvent.requestFocus();
-            }
-        });
 
         calenderEvent.setMonthChangedListener(this);
     }
@@ -82,7 +73,8 @@ public class MainActivity extends AppCompatActivity implements OnMonthChangedLis
             if (days[i].getTag(R.id.y) != null)
                 yPos[i] = (int) days[i].getTag(R.id.y);
 
-            radius[i] = 90;
+//            radius[i] = 90;
+            radius[i] = getRandomRadius(days[i].getText().toString().trim());
             isVisible[i] = !TextUtils.isEmpty(days[i].getText().toString());
 
             int width = days[i].getWidth();
@@ -100,4 +92,26 @@ public class MainActivity extends AppCompatActivity implements OnMonthChangedLis
     public void onMonthChanged() {
         onWindowFocusChanged(true);
     }
+
+    private int getRandomRadius(String dayText) {
+
+        if (TextUtils.isEmpty(dayText))
+            return 0;
+        int day = Integer.parseInt(dayText);
+        if (day % 2 == 0)
+            return 80;
+        else if (day % 3 == 0)
+            return 90;
+        else if (day % 4 == 0)
+            return 100;
+        else if (day % 5 == 0)
+            return 95;
+        else if (day % 6 == 0)
+            return 85;
+        else if (day % 7 == 0)
+            return 110;
+        else return 80;
+
+    }
+
 }
