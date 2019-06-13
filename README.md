@@ -2,7 +2,7 @@
 This is the simple library of calender month view, where you can show activity on each day of month in circular shape same as Google Fit Android app.
 
 # Screenshot
-![](https://imgur.com/a/M9u2zeB)
+![](https://ibb.co/25JL2rr)
 
 
 # Usage
