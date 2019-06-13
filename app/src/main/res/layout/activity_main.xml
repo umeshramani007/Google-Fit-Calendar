@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.skyhope.eventcalenderlibrary.CalenderEvent
+        android:id="@+id/calender_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:current_month_day_color="@color/colorAccent"
+        app:month_color="@color/colorPrimaryDark"
+        app:next_icon="@drawable/ic_arrow_forward_ios"
+        app:off_month_day_color="@color/colorPrimaryDark"
+        app:previous_icon="@drawable/ic_arrow_back_ios"
+        app:selector_color="@color/colorPrimary"
+        app:week_name_color="@color/colorPrimaryDark" />
+
+    <com.skyhope.evencalneder.MyView
+        android:id="@+id/myView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:text="Button" />
+
+</RelativeLayout>
